@@ -1,0 +1,8 @@
+<%@tasks.each do |task| %>
+<ul>
+<%= link_to task.title, task_path(task) %><%= check_box_tag("completed","", task.completed) %>
+<button class="btn"><%= link_to "Edit", edit_task_path(task) %></button>
+
+</ul>
+<%end%>
+<button class="btn"><%= link_to "New", tasks_new_path %></button>
